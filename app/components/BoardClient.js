@@ -5,7 +5,7 @@ import styles from "../page.module.css";
 
 const columns = [
   { key: "backlog", title: "1. Tuotteen kehitysjono" },
-  { key: "in_progress", title: "2. Tyon alla" },
+  { key: "in_progress", title: "2. Työn alla" },
   { key: "done", title: "3. Valmiit" },
 ];
 
@@ -62,9 +62,9 @@ export default function BoardClient({ initialItems }) {
         <input
           value={newTitle}
           onChange={(e) => setNewTitle(e.target.value)}
-          placeholder="Lisaa uusi kayttotapaus backlogiin..."
+          placeholder="Lisää uusi käyttötapaus backlogiin..."
         />
-        <button type="submit">Lisaa</button>
+        <button type="submit">Lisää</button>
       </form>
 
       <section className={styles.board}>
@@ -74,7 +74,7 @@ export default function BoardClient({ initialItems }) {
           return (
             <article className={styles.column} key={column.key}>
               <h2>{column.title}</h2>
-              {columnItems.length === 0 ? <p className={styles.empty}>Ei riveja.</p> : null}
+              {columnItems.length === 0 ? <p className={styles.empty}>Ei rivejä.</p> : null}
 
               {columnItems.map((item) => (
                 <div className={styles.card} key={item.id}>

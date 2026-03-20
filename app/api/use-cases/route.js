@@ -6,8 +6,8 @@ import {
   updateUseCaseStatus,
 } from "@/lib/db";
 
-// Next.js Route Handler toimii tassa samalla idealla kuin Express-route,
-// mutta tiedoston sijainti maarittaa URL-polun automaattisesti.
+// Next.js Route Handler toimii tässä samalla idealla kuin Express-route,
+// mutta tiedoston sijainti määrittää URL-polun automaattisesti.
 // app/api/use-cases/route.js -> /api/use-cases
 export const runtime = "nodejs";
 
@@ -44,7 +44,7 @@ export async function PATCH(request) {
 
   const updated = updateUseCaseStatus(id, status);
   if (!updated) {
-    return NextResponse.json({ error: "rivia ei loytynyt" }, { status: 404 });
+    return NextResponse.json({ error: "riviä ei löytynyt" }, { status: 404 });
   }
 
   return NextResponse.json(updated);

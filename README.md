@@ -3,7 +3,7 @@
 Yksinkertainen Next.js-sovellus, jossa on kolme saraketta:
 
 1. Tuotteen kehitysjono
-2. Tyon alla
+2. Työn alla
 3. Valmiit
 
 Data tallennetaan paikalliseen SQLite-tiedostoon `data/board.db`.
@@ -17,7 +17,7 @@ npm run dev
 
 Avaa selain: `http://localhost:3000`
 
-## Mita katsoa jos osaat jo Express + React
+## Mitä katsoa jos osaat jo Express + React
 
 - `app/page.js`
   - Oletuksena **Server Component** (ei `use client`).

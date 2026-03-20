@@ -3,9 +3,9 @@ import styles from "./page.module.css";
 import { listUseCases } from "@/lib/db";
 
 // App Routerissa page.js on oletuksena Server Component.
-// Eli tama renderoidaan ensin palvelimella ilman "use client" -direktiivia.
-// Pakotetaan dynaamiseksi, jotta SQLite luetaan jokaisella pyynnolla
-// eika vain build-vaiheessa generoituun static HTML:aan.
+// Eli tämä renderöidään ensin palvelimella ilman "use client" -direktiiviä.
+// Pakotetaan dynaamiseksi, jotta SQLite luetaan jokaisella pyynnöllä
+// eikä vain build-vaiheessa generoituun static HTML:ään.
 export const dynamic = "force-dynamic";
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
       <header className={styles.header}>
         <h1>Kehitysjono-taulu (Next.js + SQLite)</h1>
         <p>
-          Tama demo nayttaa yhden tavan rakentaa pieni taysstack-sivu App Routerilla:
+          Trello-taulu sovellus Next.js App Routerilla:
           React UI + Route Handlers + SQLite samassa projektissa.
         </p>
       </header>
