@@ -1,13 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bungee, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bodyFont = Space_Grotesk({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const displayFont = Bungee({
+  variable: "--font-display",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -19,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fi">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${bodyFont.variable} ${displayFont.variable}`}>
         {children}
       </body>
     </html>

@@ -13,8 +13,14 @@ export default function HomePage() {
 
   return (
     <main className={styles.page}>
+      <div className={styles.fireworksSky} aria-hidden="true">
+        <span className={`${styles.burst} ${styles.burstA}`} />
+        <span className={`${styles.burst} ${styles.burstB}`} />
+        <span className={`${styles.burst} ${styles.burstC}`} />
+      </div>
+
       <header className={styles.header}>
-        <h1>Kehitysjono-taulu (Next.js + SQLite)</h1>
+        <h1 className={styles.title}>Kehitysjono-taulu (Next.js + SQLite)</h1>
         <p>
           Trello-taulu sovellus Next.js App Routerilla:
           React UI + Route Handlers + SQLite samassa projektissa.

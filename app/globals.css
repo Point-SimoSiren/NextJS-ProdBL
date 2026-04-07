@@ -1,6 +1,6 @@
 :root {
-  --background: #f1f5f9;
-  --foreground: #0f172a;
+  --background: #04060f;
+  --foreground: #eef8ff;
 }
 
 * {
@@ -16,6 +16,26 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 560px at -10% -18%, rgb(71 22 153 / 30%), transparent 66%),
+    radial-gradient(980px 560px at 106% -8%, rgb(0 169 201 / 30%), transparent 62%),
+    radial-gradient(1400px 780px at 52% 116%, rgb(252 95 112 / 26%), transparent 68%),
+    var(--background);
+  font-family: var(--font-body), "Trebuchet MS", sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgb(255 255 255 / 36%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 89% 28%, rgb(255 255 255 / 32%) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 48% 76%, rgb(255 255 255 / 24%) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 72% 52%, rgb(255 255 255 / 22%) 0 1px, transparent 1.2px);
+  background-size: 220px 220px, 260px 260px, 180px 180px, 200px 200px;
+  opacity: 0.45;
 }

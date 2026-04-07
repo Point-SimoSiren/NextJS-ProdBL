@@ -72,7 +72,7 @@ export default function BoardClient({ initialItems }) {
           const columnItems = items.filter((item) => item.status === column.key);
 
           return (
-            <article className={styles.column} key={column.key}>
+            <article className={`${styles.column} ${styles[column.key]}`} key={column.key}>
               <h2>{column.title}</h2>
               {columnItems.length === 0 ? <p className={styles.empty}>Ei rivejä.</p> : null}
 
