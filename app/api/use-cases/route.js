@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import {
   createUseCase,
+  deleteUseCase,
   listUseCases,
   STATUS,
   updateUseCaseStatus,
@@ -48,4 +49,20 @@ export async function PATCH(request) {
   }
 
   return NextResponse.json(updated);
+}
+
+export async function DELETE(request) {
+  const body = await request.json();
+  const id = Number(body?.id);
+
+  if (!Number.isInteger(id)) {
+    return NextResponse.json({ error: "virheellinen id" }, { status: 400 });
+  }
+
+  const wasDeleted = deleteUseCase(id);
+  if (!wasDeleted) {
+    return NextResponse.json({ error: "riviä ei löytynyt" }, { status: 404 });
+  }
+
+  return NextResponse.json({ ok: true });
 }
